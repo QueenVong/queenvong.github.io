@@ -1,0 +1,181 @@
+body {
+	background-color: white;
+	font-family: 'Arvo', serif;
+	color: white;
+	text-align: center;
+}
+
+
+header {
+	position: fixed;
+	bottom:0;
+	width: 100%;
+}
+
+
+
+.wh {
+	letter-spacing: 4px;
+}
+
+
+h1 {
+	margin-top: 50px !important;
+}
+
+
+.col-margin {
+	margin-top: 70px;
+	line-height: 0 !important;
+}
+
+
+
+/* ONLY FOR THE LAST BOTTOM ELEMENT OF THE PAGE */
+.col-bottom {
+	margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+/* Music navigatiion bar for the TOP HEADER */
+.navbarUp {
+	width: 100%;
+	margin: 10px auto;
+	/* It moves to the middle but not aligned. */
+	max-width: 600px;
+	left: 300px;
+	color: white;
+}
+
+
+
+.playerTop {
+	position: fixed;
+	width: 100%;
+
+}
+
+
+
+
+
+
+
+/* BOTTOM NAVIGATION BAR */
+
+.navbar {
+	margin-bottom: 0 !important;
+	width: 100%;
+	margin: 0 auto;
+	border: dotted 1px Pink;
+	max-width: 600px;
+	background-color: Pink;
+	letter-spacing: 2px;
+}
+
+
+.navbar-default .navbar-brand {
+	color: HotPink;
+}
+
+
+
+.navbar-collapse.collapse {
+	display: inline-block !important;
+}
+
+
+
+
+ul {
+	color: HotPink;
+}
+
+
+
+.row-2 {
+	padding: 300px; 
+	/*the top padding/space */
+}
+
+
+
+
+
+
+/* TOP HEAD: MUSIC BUTTONS SMALLER SIZE */
+
+#stopUp {
+	font-size: 20px;
+  	display:inline-block;
+  	transition: all 0.3s;
+}
+
+
+#playUp {
+	font-size: 20px;
+  	display:inline-block;
+  	transition: all 0.3s;
+
+}
+
+
+ #pauseUp {
+ 	font-size: 20px;
+  	display: inline-block;
+  	transition: all 0.3s;
+  
+}
+
+#stopUp:hover, #playUp:hover, #pauseUp:hover {
+	transform: scale(1.3);
+	color: HotPink;
+}
+
+
+
+
+
+/* youtube api player */
+
+
+#stop {
+	font-size: 40px;
+  	display:inline-block;
+  	transition: all 0.3s;
+}
+
+
+#play {
+	font-size: 40px;
+  	display:inline-block;
+  	transition: all 0.3s;
+
+}
+
+
+ #pause {
+ 	font-size: 40px;
+  	display: inline-block;
+  	transition: all 0.3s;
+  
+}
+
+#stop:hover, #play:hover, #pause:hover {
+	transform: scale(2.3);
+	color: HotPink;
+} 
+
+
+#player{
+   	display:none; 
+}
+
+
