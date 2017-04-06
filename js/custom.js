@@ -7,11 +7,17 @@ $('.music').parallax({
 });
 
 
+
+
+
   $(".owl-carousel").owlCarousel();
 
 
 
 
+
+// Activate Carousel
+    $("#myCarousel").carousel({interval: 2000});
 
 
 
