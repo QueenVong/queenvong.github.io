@@ -1,83 +1,1 @@
-$('.firstPage').parallax({
-	imageSrc: 'https://media.giphy.com/media/svMwMGuSZTdF6/giphy.gif',
-});
-
-$('.music').parallax({
-	imageSrc: 'http://wallpapercave.com/wp/pEeUsp1.jpg',
-});
-
-
-
-
-
-  $(".owl-carousel").owlCarousel();
-
-
-
-
-
-// Activate Carousel
-    $("#myCarousel").carousel({interval: 2000});
-
-
-
-// scroll to page sections by # id
-$("nav").find("a").click(function(e) {
-    e.preventDefault();
-    var section = $(this).attr("href");
-    $("html, body").animate({
-        scrollTop: $(section).offset().top
-    });
-});
-
-
-
-
-
-
-
-
-
-
-
-// 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.'M7lc1UVf-VE',
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'T_UywfuYTvc',  //change the video here 
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        // player.mute();    
-        // up here makes the video AUTO MUTE 
-        // player.playVideo(); 
-        // VIDEO AUTOPLAY HERE!
-        event.target.playVideo();
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-
-      function onPlayerStateChange(event) {
-       
-      }
-      function stopVideo() {
-        player.stopVideo();
-      }
+$('.firstPage').parallax({	imageSrc: 'https://media.giphy.com/media/svMwMGuSZTdF6/giphy.gif',});$('.music').parallax({	imageSrc: 'http://wallpapercave.com/wp/pEeUsp1.jpg',});$('.main-carousel').parallax({  imageSrc: 'http://wallpapercave.com/wp/pEeUsp1.jpg',});// $('.showCase').parallax({//   imageSrc: 'http://wallpapercave.com/wp/pEeUsp1.jpg',// });// Activate Carousel    $("#myCarousel").carousel({interval: 2000});// scroll to page sections by # id$("nav").find("a").click(function(e) {    e.preventDefault();    var section = $(this).attr("href");    $("html, body").animate({        scrollTop: $(section).offset().top    });});var myPlaylist = ['qMgtAdIl3RI','T_UywfuYTvc','qMgtAdIl3RI'];var myCurrentVideo = 0;// 2. This code loads the IFrame Player API code asynchronously.      var tag = document.createElement('script');      tag.src = "https://www.youtube.com/iframe_api";      var firstScriptTag = document.getElementsByTagName('script')[0];      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);      // 3. This function creates an <iframe> (and YouTube player)      //    after the API code downloads.'M7lc1UVf-VE',      var player;      function onYouTubeIframeAPIReady() {        player = new YT.Player('player', {          height: '390',          width: '640',          videoId: 'T_UywfuYTvc',  //change the video here           events: {            'onReady': onPlayerReady,            'onStateChange': onPlayerStateChange          }        });      }      // 4. The API will call this function when the video player is ready.      function onPlayerReady(event) {        // player.mute();            // up here makes the video AUTO MUTE         // player.playVideo();         // VIDEO AUTOPLAY HERE!        event.target.playVideo();      }      function getNext() {        console.log("log");        player.loadVideoById(myPlaylist[myCurrentVideo +1]);        myCurrentVideo++;        if(myCurrentVideo >= myPlaylist.length){          myCurrentVideo = -1;        }      }      // 5. The API calls this function when the player's state changes.      //    The function indicates that when playing a video (state=1),      //    the player should play for six seconds and then stop.      function onPlayerStateChange(event) {             }      function stopVideo() {        player.stopVideo();      }      particlesJS("particles-js", {    "particles": {        "number": {            "value": 8,            "density": {                "enable": true,                "value_area": 80            }        },        "color": {            "value": "#ffffff"        },        "shape": {            "type": "circle",            "stroke": {                "width": 0,                "color": "HotPink"            },            "polygon": {                "nb_sides": 5            },            "image": {                "src": "img/github.svg",                "width": 100,                "height": 100            }        },        "opacity": {            "value": 0.5,            "random": false,            "anim": {                "enable": false,                "speed": 1,                "opacity_min": 0.1,                "sync": false            }        },        "size": {            "value": 3,            "random": true,            "anim": {                "enable": false,                "speed": 10,                "size_min": 0.1,                "sync": false            }        },        "line_linked": {            "enable": true,            "distance": 150,            "color": "#ffffff",            "opacity": 0.4,            "width": 1        },        "move": {            "enable": true,            "speed": 2,            "direction": "none",            "random": false,            "straight": false,            "out_mode": "out",            "bounce": false,            "attract": {                "enable": false,                "rotateX": 600,                "rotateY": 1200            }        }    },    "interactivity": {        "detect_on": "canvas",        "events": {            "onhover": {                "enable": true,                "mode": "repulse"            },            "onclick": {                "enable": true,                "mode": "push"            },            "resize": true        },        "modes": {            "grab": {                "distance": 400,                "line_linked": {                    "opacity": 1                }            },            "bubble": {                "distance": 400,                "size": 40,                "duration": 2,                "opacity": 8,                "speed": 3            },            "repulse": {                "distance": 200,                "duration": 0.4            },            "push": {                "particles_nb": 4            },            "remove": {                "particles_nb": 2            }        }    },    "retina_detect": true});// var count_particles, stats, update;// stats = new Stats;// stats.setMode(0);// stats.domElement.style.position = 'absolute';// stats.domElement.style.left = '0px';// stats.domElement.style.top = '0px';// document.body.appendChild(stats.domElement);// update = function() {//     // if (loopCount==resetCount){//     //   console.log (loopCount);//     //   loopCount=0;//       stats.begin();//       stats.end();//       if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {//           // count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;//       }//     // }//     // loopCount += 1;//     requestAnimationFrame(update);// };// requestAnimationFrame(update);;$('#img1').on('click', function(){  if( $('.imgSHow').hasClass('imgOpen') ){    $('.imgSHow').attr('style', ' transition:all 300ms ease-out;');    $('.imgSHow').removeClass('imgOpen');     if($('#fullImg').attr('src') != 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33b56a41481811.57a841069c967.png'){      setTimeout(function(){          $('#fullImg').attr('src', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33b56a41481811.57a841069c967.png');          $('.imgSHow').attr('style', ' transition:all 1.8s ease-out;');          $('.imgSHow').addClass('imgOpen');      },300);     }  }else{     $('#fullImg').attr('src', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33b56a41481811.57a841069c967.png');     $('.imgSHow').attr('style', ' transition:all 1800ms ease-out;');     $('.imgSHow').addClass('imgOpen');  }});$('#img2').on('click', function(){  if( $('.imgSHow').hasClass('imgOpen') ){    $('.imgSHow').attr('style', ' transition:all 0.3s ease-out;');    $('.imgSHow').removeClass('imgOpen');    if($('#fullImg').attr('src') != 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d5e3ee41481811.57a841069d3ef.png'){      setTimeout(function(){        $('#fullImg').attr('src', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d5e3ee41481811.57a841069d3ef.png');        $('.imgSHow').attr('style', ' transition:all 1800ms ease-out;');        $('.imgSHow').addClass('imgOpen');      },300);    }  }else{    $('#fullImg').attr('src', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d5e3ee41481811.57a841069d3ef.png');    $('.imgSHow').attr('style', ' transition:all 1.8s ease-out;');     $('.imgSHow').addClass('imgOpen');  }});$('#img3').on('click', function(){  if( $('.imgSHow').hasClass('imgOpen') ){    $('.imgSHow').attr('style', ' transition:all 300ms ease-out;');    $('.imgSHow').removeClass('imgOpen');     if($('#fullImg').attr('src') != 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33b56a41481811.57a841069c967.png'){      setTimeout(function(){          $('#fullImg').attr('src', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33b56a41481811.57a841069c967.png');          $('.imgSHow').attr('style', ' transition:all 1.8s ease-out;');          $('.imgSHow').addClass('imgOpen');      },300);     }  }else{     $('#fullImg').attr('src', 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/33b56a41481811.57a841069c967.png');     $('.imgSHow').attr('style', ' transition:all 1800ms ease-out;');     $('.imgSHow').addClass('imgOpen');  }});

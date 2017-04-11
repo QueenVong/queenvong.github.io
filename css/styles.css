@@ -1,5 +1,5 @@
 body {
-	background-color: white;
+	background-color: black;
 	font-family: 'Arvo', serif;
 	color: white;
 	text-align: center;
@@ -31,21 +31,19 @@ header {
 	width: 100%;
 }
 
-
-.theFinishes img {
-	width: 100%;
-	max-width: 650px;
-}
-
-
 h1 {
 	margin-top: 50px !important;
 }
 
 
-.col-margin {
+
+
+/*the spacing for showCase part */
+.col-margin {  
 	margin-top: 100px;
-	line-height: 0 !important;
+	margin-bottom: 50px;
+	/*line-height: 0 !important;*/
+
 }
 
 
@@ -54,6 +52,65 @@ h1 {
 .col-bottom {
 	margin-bottom: 100px;
 }
+
+
+.colNavBar {
+	padding-top: 10px;
+}
+
+
+#showCase {
+	background: #7b4397; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */ 
+	background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
+
+
+
+
+
+
+#main-carousel {
+	padding-top: 300px;
+	padding-bottom: 300px;
+}
+
+
+/*.showCase img {
+	width: 100%;
+	max-width: 650px;
+
+}*/
+
+
+.imgSHow{
+  height: auto;
+  max-height:0px;
+  overflow:hidden;
+  transition:all 1800ms ease-out;
+
+}
+.imgOpen {
+  max-height:1000px;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+#box img {
+  width:449px;
+  border-radius: 30px;
+  border-spacing: 20px !important;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+
+}
+
+.col-md-6, .col-md-8 {
+	width: 100% !important;
+}
+
+
+
+
+
+
 
 
 
@@ -82,7 +139,10 @@ h1 {
 }
 
 .playerCenter {
-	margin: 0 auto;
+	width: 100%;
+	background-color: HotPink;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
 }
 
 
@@ -104,63 +164,46 @@ h1 {
 }
 
 
-.navbar-brand  {
-	color: HotPink;
-}
-
-
-
-.navbar-collapse.collapse {
-	display: inline-block !important;
-}
-
-
-
-
-li {
-	color: HotPink;
-}
-
-
-
 .musicRow {
 	padding: 300px; 
 	/*the top padding/space */
 }
 
 
-a:hover {
+a {
 	transition: all 0.3s;
 	color: HotPink;
+	text-decoration: blink;
+	text-shadow: 1px 1px 9px Black;
+	letter-spacing: 3px;
+	word-spacing: 2px;
+}
+
+
+a:hover {
+	
+	color: #FFF;
 	background-color: none !important;
 	transform: scale(0.8);
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-     color: white;
-}
-
-a {
-	color: HotPink !important;
+	text-decoration: none !important;
 }
 
 
-#theFinishes:hover, #music:hover {
-	background-color: none !important;
-}
 
 
-/* TOP HEAD: MUSIC BUTTONS SMALLER SIZE */
 
-#stopUp {
+
+
+/* BOTTOM: MUSIC BUTTONS SMALLER SIZE */
+
+#stopB {
 	font-size: 20px;
   	display:inline-block;
   	transition: all 0.3s;
 }
 
 
-#playUp {
+#playB {
 	font-size: 20px;
   	display:inline-block;
   	transition: all 0.3s;
@@ -168,14 +211,30 @@ a {
 }
 
 
- #pauseUp {
+ #pauseB {
+ 	font-size: 20px;
+  	display: inline-block;
+  	transition: all 0.3s;
+}
+
+
+ #nextB {
  	font-size: 20px;
   	display: inline-block;
   	transition: all 0.3s;
   
 }
 
-#stopUp:hover, #playUp:hover, #pauseUp:hover {
+
+#stopB, #playB, #pauseB, #nextB {
+	text-decoration: blink;
+	text-shadow: 1px 1px 9px Black;
+	letter-spacing: 3px;
+	word-spacing: 2px;
+}
+
+
+#stopB:hover, #playB:hover, #pauseB:hover, #nextB:hover {
 	transform: scale(1.3);
 	color: HotPink;
 }
@@ -214,7 +273,13 @@ a {
   
 }
 
-#stop:hover, #play:hover, #pause:hover {
+#next {
+ 	font-size: 40px;
+  	display: inline-block;
+  	transition: all 0.3s;
+  }
+
+#stop:hover, #play:hover, #pause:hover, #next:hover{
 	transform: scale(1.3);
 	color: HotPink;
 } 
@@ -223,5 +288,88 @@ a {
 #player{
    	display:none; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---- reset ---- */ 
+
+
+	.colParticles {
+		margin-top: 300px;
+		line-height: 0 !important;
+		word-spacing: 40px;
+	}
+
+	canvas {
+		display: block; 
+		vertical-align: bottom; 
+	} /* ---- particles.js container ---- */ 
+
+	#particles-js { 
+		position:absolute; 
+		width: 100%; 
+		height: 100 vh; 
+		background: #16BFFD; 
+		/* fallback for old browsers */ 
+		background: -webkit-linear-gradient(to left, #16BFFD , #CB3066); 
+		/* Chrome 10-25, Safari 5.1-6 */ 
+		background: linear-gradient(to left, #16BFFD , #CB3066); 
+		/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+		/*background-image: url(""); 
+		background-repeat: no-repeat; 
+		background-size: cover; 
+		background-position: 50% 50%; */
+	} /* ---- stats.js ---- */ 
+
+	.count-particles { 
+		background: #000022; 
+		position: absolute; 
+		top: 48px; 
+		left: 0; 
+		width: 80px; 
+		color: #13E8E9; 
+		font-size: .8em; 
+		text-align: left; 
+		text-indent: 4px; 
+		line-height: 14px; 
+		padding-bottom: 2px; 
+	} 
+
+	.js-count-particles { 
+		font-size: 1.1em; 
+	} 
+	#stats, .count-particles { 
+		-webkit-user-select: none; 
+		margin-top: 5px; 
+		margin-left: 5px; 
+	} 
+	#stats { 
+		border-radius: 3px 3px 0 0; 
+		overflow: hidden; 
+	} 
+	.count-particles { 
+		border-radius: 0 0 3px 3px; 
+	}
 
 
